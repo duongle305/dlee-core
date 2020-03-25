@@ -1,14 +1,29 @@
 {
-    "name": "dlee/core",
-    "description": "Package loader based the Laravel Framework",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Duong Le",
-            "email": "duonglt30597@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+  "name": "dlee/core",
+  "description": "Package loader based the Laravel Framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Duong Le",
+      "email": "duonglt30597@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "ext-gd": "*",
+    "laravel/laravel": "^6.0|^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DLee\\Platform\\Core\\": "./app"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DLee\\Platform\\Core\\Providers\\CoreServiceProvider"
+      ]
+    }
+  }
 }
